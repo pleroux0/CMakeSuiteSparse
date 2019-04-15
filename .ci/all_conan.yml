@@ -2,7 +2,7 @@ parameters:
   conan_settings: ''
 
 steps:
-  - template: ".ci/conan.yml"
+  - template: "conan.yml"
     parameters: 
       name: "config"
       conan_settings: ${{ parameters.conan_settings }}

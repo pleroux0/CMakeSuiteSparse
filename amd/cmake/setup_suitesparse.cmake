@@ -50,9 +50,9 @@ function(setup_suitesparse_library name sources)
   add_library(${lcname} ${sources})
   add_library(suitesparse::${lcname} ALIAS ${lcname})
 
-  # Change library file name
+  # Change library properties
   set_target_properties(${lcname} PROPERTIES OUTPUT_NAME suitesparse_${lcname})
-
+  set_target_properties(${lcname} PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
   # Set include directories
   target_include_directories(${lcname}

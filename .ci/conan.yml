@@ -5,7 +5,7 @@ parameters:
 steps:
   - script: mkdir build build/${{ parameters.name }}
     displayName: "${{ parameters.name }}: Make build directory"
-  - script: conan export-pkg . pleroux0/stable ${{ parameter.conan_settings }}
+  - script: conan export-pkg . pleroux0/stable ${{ parameters.conan_settings }}
     workingDirectory: build/${{ parameters.name }}
     displayName: "${{ parameters.name }}: Export Conan Package"
   - script: conan upload suitesparse-${{ parameters.name }}/5.4.0@pleroux0/stable

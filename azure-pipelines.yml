@@ -1,0 +1,23 @@
+name: "Linux"
+
+strategy:
+  matrix:
+    gcc8:
+      Container: pleroux0/devel-gcc8:latest
+
+trigger: none
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+container: $[ variables['Container'] ]
+
+steps:
+  - template: ".ci/all_conan.yml"
+    parameters: {"conan_settings": "-o shared=True"}
+
+  - template: ".ci/all_conan.yml"
+    parameters: {"conan_settings": "-o shared=False -o PIC=False"}
+
+  - template: ".ci/all_conan.yml"
+    parameters: {"conan_settings": "-o shared=False -o PIC=True"}

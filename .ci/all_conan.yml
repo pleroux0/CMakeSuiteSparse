@@ -1,0 +1,14 @@
+parameters:
+  conan_settings: ''
+
+steps:
+  - template: ".ci/conan.yml"
+    parameters: { "name": "config", "conan_settings": ${{ parameters.conan_settings }} }
+  #- template: ".ci/conan.yml"
+  #  parameters: { "name": "amd", "conan_settings": ${{ parameters.conan_settings }} }
+  #- template: ".ci/conan.yml"
+  #  parameters: { "name": "klu", "conan_settings": ${{ parameters.conan_settings }} }
+  #- template: ".ci/conan.yml"
+  #  parameters: { "name": "config", "conan_settings": ${{ parameters.conan_settings }} }
+  #- template: ".ci/conan.yml"
+  #  parameters: { "name": "config", "conan_settings": ${{ parameters.conan_settings }} }

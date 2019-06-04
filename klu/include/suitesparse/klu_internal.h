@@ -7,9 +7,9 @@
 #ifndef _KLU_INTERNAL_H
 #define _KLU_INTERNAL_H
 
-#include "klu.h" 
-#include "btf.h"
-#include "klu_version.h"
+#include "suitesparse/klu.h"
+#include "suitesparse/btf.h"
+#include "suitesparse/klu_version.h"
 
 /* ========================================================================== */
 /* make sure debugging and printing is turned off */

@@ -93,7 +93,7 @@
 extern "C" {
 #endif
 
-#include "SuiteSparse_config.h"
+#include "suitesparse/config.h"
 
 int btf_maxtrans    /* returns # of columns matched */
 (

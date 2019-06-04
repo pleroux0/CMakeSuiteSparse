@@ -127,7 +127,7 @@ extern "C" {
 /* === Prototypes of user-callable routines ================================= */
 /* ========================================================================== */
 
-#include "SuiteSparse_config.h"
+#include "suitesparse/config.h"
 
 size_t colamd_recommended	/* returns recommended value of Alen, */
 				/* or 0 if input arguments are erroneous */

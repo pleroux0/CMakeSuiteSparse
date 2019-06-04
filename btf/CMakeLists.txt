@@ -2,14 +2,8 @@ cmake_minimum_required(VERSION 3.11 FATAL_ERROR)
 
 project(CMakeSuiteSparseBTF VERSION 5.4.0 LANGUAGES C)
 
-# Includes
-include(${PROJECT_SOURCE_DIR}/cmake/setup_suitesparse.cmake)
+set(BTF_SRC src/btf_maxtrans.c src/btf_order.c src/btf_strongcomp.c)
 
-# Dependencies
-find_package(CMakeSuiteSparseConfig)
-
-set(BTF_SRC btf_maxtrans.c btf_order.c btf_strongcomp.c)
-
-setup_suitesparse_library(BTF "${BTF_SRC}")
+suitesparse_target(BTF "${BTF_SRC}")
 
 target_link_libraries(btf suitesparse::config)

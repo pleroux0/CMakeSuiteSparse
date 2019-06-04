@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.11 FATAL_ERROR)
 
-project(CMakeSuiteSparseKLY VERSION 5.4.0 LANGUAGES C)
+project(CMakeSuiteSparseKLU VERSION 5.4.0 LANGUAGES C)
 
 # Fetch SuiteSparse
 include(${PROJECT_SOURCE_DIR}/cmake/setup_suitesparse.cmake)
